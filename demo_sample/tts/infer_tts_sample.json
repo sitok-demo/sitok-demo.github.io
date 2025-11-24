@@ -1,0 +1,53 @@
+{
+    "test_cases": [
+        {
+            "target_uid": "en_002",
+            "prompt_wav_path": "demo_sample/tts/prompt/en_002.wav",
+            "prompt_text": "Well, a growing number of people from ethnic backgrounds are getting bored of all these white male superheroes they can't relate to, and they're hungry for characters a little closer to home or relevant to their own lives",
+            "target_text": "After that point, new developments and insights in various fields, such as technology, science, and culture, continue to emerge. It is essential to stay updated with the latest information to keep our understanding current and relevant. Engaging with recent publications, discussions, and updates will enhance our knowledge and perspective on evolving topics."
+        },
+        {
+            "target_uid": "en_013",
+            "prompt_wav_path": "demo_sample/tts/prompt/en_013.wav",
+            "prompt_text": "Get in line, troublemakers, and I'll take care of you!",
+            "target_text": "You think you can just waltz in here and cause chaos? Well, I've got news for you. This time, there's no escaping the consequences. So, one by one, step forward, and let's see who's bold enough to face the music. It's time for a little dose of reality—prepare to be dealt with!"
+        },
+        {
+            "target_uid": "en_014",
+            "prompt_wav_path": "demo_sample/tts/prompt/en_014.wav",
+            "prompt_text": "The loving care of your elder has been fed into the barrel. Now, feel its warmth!",
+            "target_text": "Let it envelop you like a cozy blanket, reminding you of the moments shared and the lessons learned. Embrace the wisdom that flows from those experiences, letting it guide you through challenges and inspire your dreams. Each memory is a treasure, a flicker of light that can illuminate the darkest paths. Let the love of your elder resonate within."
+        },
+        {
+            "target_uid": "en_015",
+            "prompt_wav_path": "demo_sample/tts/prompt/en_015.wav",
+            "prompt_text": "His friendly face had bright happy eyes and the biggest welcoming smile.",
+            "target_text": "He greeted everyone with genuine warmth, making each person feel special and valued. As he engaged in conversation, his laughter was infectious, creating an atmosphere of joy that drew people in. Whether it was a simple hello or an encouraging word, his presence had the power to uplift even the heaviest of hearts, leaving a lasting impression on all who crossed his path."
+        },
+        {
+            "target_uid": "en_018",
+            "prompt_wav_path": "demo_sample/tts/prompt/en_018.wav",
+            "prompt_text": "So lovely to see you, Lady Browning, but all the barristers and all the world agree you have no chance whatsoever of winning a case against the current heir.",
+            "target_text": "However, I believe that justice has a way of revealing itself in unexpected manners, and while the odds may be stacked against me, I am not one to back down easily. The law can often be a labyrinth, and within its twists and turns, there may still be a glimmer of hope. I have gathered a team of legal minds who are willing to explore every avenue, challenge every assumption, and shed light on the truths that others may wish to keep hidden. With tenacity and resilience, we will forge ahead, for sometimes the most remarkable victories come from the most unlikely circumstances."
+        },
+        {
+            "target_uid": "en_019",
+            "prompt_wav_path": "demo_sample/tts/prompt/en_019.wav",
+            "prompt_text": "If you find it difficult to have someone sleeping beside you after all this time, I can creep off into the spare room.",
+            "target_text": "It might give you the space to collect your thoughts and emotions, to reflect on everything we've been through. After all, sometimes a little distance can provide clarity, and I want you to feel comfortable."
+        },
+        {
+            "target_uid": "en_022",
+            "prompt_wav_path": "demo_sample/tts/prompt/en_022.wav",
+            "prompt_text": "Park over there, where I am pointing. Look at my finger pointing, my arms waving.",
+            "target_text": "You'll see a large oak tree nearby, and just beyond that, there's a small playground with swings and slides. It's a great spot for relaxing or letting the kids have some fun. Just follow the path, and you'll find plenty of space to enjoy the fresh air."
+        },
+        {
+            "target_uid": "en_025",
+            "prompt_wav_path": "demo_sample/tts/prompt/en_025.wav",
+            "prompt_text": "Besides, people will see. It would look like I'm enjoying myself, which I have no right to do. Look at me.",
+            "target_text": "I can't shake this feeling of guilt, this notion that happiness is something I have to earn, not something I can simply take. Every laugh feels forced, every smile feels like a mask, hiding the turmoil within. I keep reminding myself of the struggles around me, the battles that so many face daily. How could I possibly revel in joy when there's so much sorrow in the world? It's a constant tug-of-war between wanting to feel free and the weight of responsibility pressing down on my heart."
+        }
+    ]
+}
+    

@@ -1,0 +1,277 @@
+[
+  {
+    "input": {
+      "text": "It's been hard keeping secrets, especially when every moment feels like it's pulling them farther apart. Memories of laughter and shared dreams haunted her thoughts, making it impossible to move on. She paced around the room, heart racing, yearning for an explanation, for closure. Why had he chosen silence over the truth? She knew the pain of loss all too well, but letting go of the past felt like abandoning hope. Would confronting him finally bring peace, or would it shatter the fragile bond they still held?"
+    },
+    "prompt": {
+      "uid": "en_001",
+      "duration": 15.88925,
+      "text": " A chance to leave him alone, but... No. She just wanted to see him again. Anna, you don't know how it feels to lose a sister. Anna, I'm sorry, but your father asked me not to tell you anything."
+    },
+    "output_path": "regular#en_001.wav"
+  },
+  {
+    "input": {
+      "text": "After that point, new developments and insights in various fields, such as technology, science, and culture, continue to emerge. It is essential to stay updated with the latest information to keep our understanding current and relevant. Engaging with recent publications, discussions, and updates will enhance our knowledge and perspective on evolving topics. This ongoing learning process is crucial in an ever-changing world where information is constantly advancing and shifting."
+    },
+    "prompt": {
+      "uid": "en_002",
+      "duration": 12.6,
+      "text": "Well, a growing number of people from ethnic backgrounds are getting bored of all these white male superheroes they can't relate to, and they're hungry for characters a little closer to home or relevant to their own lives"
+    },
+    "output_path": "regular#en_002.wav"
+  },
+  {
+    "input": {
+      "text": "I've witnessed the rise and fall of countless species, the shifting of continents, and the ebb and flow of oceans. My beauty inspires art and poetry, while my fury can reshape landscapes in moments. I provide life-giving rain, nourishing soil, and vast ecosystems teeming with diversity. Yet, I also remind humanity of its fragility and the delicate balance that sustains us all."
+    },
+    "prompt": {
+      "uid": "en_003",
+      "duration": 14.071916666666667,
+      "text": " Some call me nature. Others call me Mother Nature. I've been here for over 4.5 billion years, 22,500 times longer than you."
+    },
+    "output_path": "regular#en_003.wav"
+  },
+  {
+    "input": {
+      "text": "This shift is sparking a demand for diverse storytelling that resonates with a wider audience. Creators are now exploring rich narratives that reflect different cultures, backgrounds, and experiences, introducing heroes who share the struggles and triumphs of these communities. As a result, we’re witnessing an exciting evolution in the landscape of comics and films, where everyone can see themselves represented in heroic journeys. It's a celebration of individuality and an invitation for all voices to join the narrative."
+    },
+    "prompt": {
+      "uid": "en_004",
+      "duration": 5.2005,
+      "text": "And the aggregate amount of debt sued for was 81,791 pounds."
+    },
+    "output_path": "regular#en_004.wav"
+  },
+  {
+    "input": {
+      "text": "...But that just means I need to focus on the mission! Let's see, today I have to help with the cleanup in Mondstadt and make sure everyone's safe. I might even get to try out some new firecrackers after! Oh, and I shouldn't forget to check in with Albedo to see if he has any new experiments for me to help with. What a busy day it will be!"
+    },
+    "prompt": {
+      "uid": "en_005",
+      "duration": 10.5071875,
+      "text": "Spark Knight Klee of the Knights of Favonius, reporting for duty! ...There's some more, but uh, I forgot. I'm not so good at remembering..."
+    },
+    "output_path": "regular#en_005.wav"
+  },
+  {
+    "input": {
+      "text": "How dare you!? You have crossed a line that should never be crossed, and now I must stand my ground. It’s time to confront the truth and address the consequences of your actions. We must talk, face to face, and clear the air before any further misunderstandings can arise. Let’s not let this moment slip away without resolution."
+    },
+    "prompt": {
+      "uid": "en_006",
+      "duration": 1.524,
+      "text": "How dare you!?"
+    },
+    "output_path": "regular#en_006.wav"
+  },
+  {
+    "input": {
+      "text": "Embrace the possibilities that lie ahead, explore the world with an open heart, and let your dreams guide you on this new journey. Every step you take brings you closer to the adventures waiting to unfold, so take a deep breath and dive into the unknown with confidence."
+    },
+    "prompt": {
+      "uid": "en_007",
+      "duration": 1.2173333333333334,
+      "text": "Go, you're free now."
+    },
+    "output_path": "regular#en_007.wav"
+  },
+  {
+    "input": {
+      "text": "...or perhaps they simply wanted to leave a mark, a piece of themselves in a world that feels increasingly transient. The items could tell stories of their journey, each one a fragment of past encounters, decisions, and emotions locked away in time. As I examined them closely, it became apparent that they held more than just material value; they represented connections to people and places long forgotten, whispers of lives intertwined in ways that might never be fully understood."
+    },
+    "prompt": {
+      "uid": "en_008",
+      "duration": 5.851428571428571,
+      "text": "Perhaps whoever left these behind was... also fulfilling a contract?"
+    },
+    "output_path": "regular#en_008.wav"
+  },
+  {
+    "input": {
+      "text": "I thought you might have gotten lost or caught up with something. I was beginning to wonder if we would ever meet. It's nice to finally see you and catch up. I've got so much to share about what’s been happening lately!"
+    },
+    "prompt": {
+      "uid": "en_009",
+      "duration": 2.452,
+      "text": "I've been waiting for you for ages."
+    },
+    "output_path": "regular#en_009.wav"
+  },
+  {
+    "input": {
+      "text": "Just like the seasons change and bring forth vibrant blossoms, so too can relationships mend and evolve over time. With patience and understanding, past grievances can fade, allowing for new connections to blossom. Reunions can feel like spring, refreshing and filled with hope, as people rediscover the bond that once brought them together. In the end, it's the nurturing of those connections that allows love and friendship to flourish once more."
+    },
+    "prompt": {
+      "uid": "en_010",
+      "duration": 5.753125,
+      "text": "If flowers can bloom anew, can people once separated be reunited?"
+    },
+    "output_path": "regular#en_010.wav"
+  },
+  {
+    "input": {
+      "text": "Well, it's not that I don't like ladies; it's just that sometimes, a bit of wisdom and life experience can be more intriguing. There's something refreshing about engaging in conversations that span different perspectives and stories, and you never know what you might learn from someone who’s seen it all. It's all about the connection you make, regardless of age or gender."
+    },
+    "prompt": {
+      "uid": "en_011",
+      "duration": 4.72,
+      "text": " Now, what do you want with a geezer? Don't you like, ladies?"
+    },
+    "output_path": "regular#en_011.wav"
+  },
+  {
+    "input": {
+      "text": "In just a heartbeat, I can traverse oceans, cross mountains, and explore cities that I've only dreamed of. Each jump is an adventure, filled with new sights, sounds, and experiences. Imagine standing at the edge of the Grand Canyon one moment and finding myself in the bustling streets of Tokyo the next. The world is vast, and yet with each leap, it feels so close, as if all its wonders are just a heartbeat away. Isn't it exhilarating to think about the endless possibilities that await?"
+    },
+    "prompt": {
+      "uid": "en_012",
+      "duration": 7.8152083333333335,
+      "text": "A single leap takes me 10 thousand miles away! Can you believe it?"
+    },
+    "output_path": "regular#en_012.wav"
+  },
+  {
+    "input": {
+      "text": "You think you can just waltz in here and cause chaos? Well, I've got news for you. This time, there's no escaping the consequences. So, one by one, step forward, and let's see who’s bold enough to face the music. It's time for a little dose of reality—prepare to be dealt with!"
+    },
+    "prompt": {
+      "uid": "en_013",
+      "duration": 4.937333333333333,
+      "text": "Get in line, troublemakers, and I'll \"take care\" of you!"
+    },
+    "output_path": "regular#en_013.wav"
+  },
+  {
+    "input": {
+      "text": "Let it envelop you like a cozy blanket, reminding you of the moments shared and the lessons learned. Embrace the wisdom that flows from those experiences, letting it guide you through challenges and inspire your dreams. Each memory is a treasure, a flicker of light that can illuminate the darkest paths. Let the love of your elder resonate within, fueling your journey forward with strength and compassion."
+    },
+    "prompt": {
+      "uid": "en_014",
+      "duration": 6.700854166666667,
+      "text": "The loving care of your elder has been fed into the barrel. Now, feel its warmth!"
+    },
+    "output_path": "regular#en_014.wav"
+  },
+  {
+    "input": {
+      "text": "He greeted everyone with genuine warmth, making each person feel special and valued. As he engaged in conversation, his laughter was infectious, creating an atmosphere of joy that drew people in. Whether it was a simple hello or an encouraging word, his presence had the power to uplift even the heaviest of hearts, leaving a lasting impression on all who crossed his path."
+    },
+    "prompt": {
+      "uid": "en_015",
+      "duration": 4.686,
+      "text": " His friendly face had bright happy eyes and the biggest welcoming smile."
+    },
+    "output_path": "regular#en_015.wav"
+  },
+  {
+    "input": {
+      "text": "Eventually, the artist begins to lose their spark, their creativity stifled under the weight of excessive pressure and expectation. They become trapped in a cycle of self-doubt, struggling to find their voice amidst the noise. What was once a vibrant expression of their innermost thoughts transforms into a mere shadow of itself, as inspiration fades and passion dwindles. In this suffocating environment, the very essence of art is threatened, leading to a heartbreaking silence where there should be a symphony of ideas."
+    },
+    "prompt": {
+      "uid": "en_016",
+      "duration": 5.756,
+      "text": " Do you know what happens to the artist when you smother and smother and smother him? Hm?"
+    },
+    "output_path": "regular#en_016.wav"
+  },
+  {
+    "input": {
+      "text": "As the cold wind howled through the empty streets, the tenant gathered his meager belongings, heart heavy with despair. The townsfolk whispered of the lord's cruelty, their eyes filled with sympathy, but fear kept them silent. Little did they know, this act of malice would spark a rebellion, as the oppressed began to unite, forging a plan to reclaim their dignity and right the wrongs that had plagued their lives for far too long."
+    },
+    "prompt": {
+      "uid": "en_017",
+      "duration": 4.432,
+      "text": " The wicked lord of the manor, who kicked his poor defenseless tenant out into the street.  "
+    },
+    "output_path": "regular#en_017.wav"
+  },
+  {
+    "input": {
+      "text": "However, I believe that justice has a way of revealing itself in unexpected manners, and while the odds may be stacked against me, I am not one to back down easily. The law can often be a labyrinth, and within its twists and turns, there may still be a glimmer of hope. I have gathered a team of legal minds who are willing to explore every avenue, challenge every assumption, and shed light on the truths that others may wish to keep hidden. With tenacity and resilience, we will forge ahead, for sometimes the most remarkable victories come from the most unlikely circumstances."
+    },
+    "prompt": {
+      "uid": "en_018",
+      "duration": 9.694,
+      "text": "So lovely to see you, Lady Browning, but all the barristers and all the world agree you have no chance whatsoever of winning a case against the current heir. "
+    },
+    "output_path": "regular#en_018.wav"
+  },
+  {
+    "input": {
+      "text": "It might give you the space to collect your thoughts and emotions, to reflect on everything we've been through. After all, sometimes a little distance can provide clarity, and I want you to feel comfortable. "
+    },
+    "prompt": {
+      "uid": "en_019",
+      "duration": 6.774,
+      "text": "If you find it difficult to have someone sleeping beside you after all this time, I can creep off into the spare room.  "
+    },
+    "output_path": "regular#en_019.wav"
+  },
+  {
+    "input": {
+      "text": "The only sound was the soft rustle of leaves outside, accompanied by the occasional snap of a twig. Inside, the flickering light from a small, struggling candle cast eerie shadows on the wooden walls. Dust motes danced in the beam, and a chill settled deep in the air. An old, tattered blanket lay in the corner, its fabric worn thin from years of use. Everything felt forgotten, as if time had stood still in this secluded haven. Suddenly, a faint noise echoed from outside, causing the hairs on the back of her neck to stand on end."
+    },
+    "prompt": {
+      "uid": "en_020",
+      "duration": 4.499,
+      "text": " A shack in the woods. It was dark, cold, and drafty."
+    },
+    "output_path": "regular#en_020.wav"
+  },
+  {
+    "input": {
+      "text": "who seem to think they know better than the vision I have laid out. It’s frustrating to navigate through this noise, trying to keep the focus on our goals without losing sight of the collaborative spirit that brought us here in the first place. Every decision I make is with the best interest of the project, and I need each of you to trust that I am steering the ship toward success. Let's refocus and channel that energy into productive discussions rather than second-guessing each other."
+    },
+    "prompt": {
+      "uid": "en_021",
+      "duration": 8.149,
+      "text": " I have reminded you all numerous times that I am directing this, and still I'm surrounded by backseat drivers"
+    },
+    "output_path": "regular#en_021.wav"
+  },
+  {
+    "input": {
+      "text": "You'll see a large oak tree nearby, and just beyond that, there's a small playground with swings and slides. It's a great spot for relaxing or letting the kids have some fun. Just follow the path, and you'll find plenty of space to enjoy the fresh air."
+    },
+    "prompt": {
+      "uid": "en_022",
+      "duration": 6.247,
+      "text": "Park over there, where I am pointing. Look at my finger pointing, my arms waving."
+    },
+    "output_path": "regular#en_022.wav"
+  },
+  {
+    "input": {
+      "text": "I would lose myself in the rhythm of the work, the smell of fresh paint and sawdust filling the air. Each stroke brought a sense of calm, a momentary escape from the chaos of the past. As the sun dipped below the horizon, the colors transformed under the soft glow of the lamp, shadows dancing on the walls, whispering memories of better days. Yet, despite the ache and the labor, there was something healing in it, a promise of new beginnings."
+    },
+    "prompt": {
+      "uid": "en_023",
+      "duration": 7.521,
+      "text": " sanding wood until my back ached, painting into the night, varnishing, god, he used to bite me ill. Anyway."
+    },
+    "output_path": "regular#en_023.wav"
+  },
+  {
+    "input": {
+      "text": "They wandered through the world, lost in a sea of conformity, while the spark of imagination flickered dimly within. Each day felt like a repetition of the last, where colors faded into shades of gray, stifling the vibrant ideas that longed to break free. Yet, deep down, they yearned for the moment when someone would recognize the beauty of their unique vision. Perhaps one day, the walls of ignorance would crumble, and the symphony of creativity would finally resonate in every heart."
+    },
+    "prompt": {
+      "uid": "en_024",
+      "duration": 4.958,
+      "text": "In which nobody, NOBODY understood what it was to be a creative being."
+    },
+    "output_path": "regular#en_024.wav"
+  },
+  {
+    "input": {
+      "text": "I can’t shake this feeling of guilt, this notion that happiness is something I have to earn, not something I can simply take. Every laugh feels forced, every smile feels like a mask, hiding the turmoil within. I keep reminding myself of the struggles around me, the battles that so many face daily. How could I possibly revel in joy when there’s so much sorrow in the world? It's a constant tug-of-war between wanting to feel free and the weight of responsibility pressing down on my heart."
+    },
+    "prompt": {
+      "uid": "en_025",
+      "duration": 6.707,
+      "text": "Besides, people will see. It would look like I'm enjoying myself, which I have no right to do. Look at me.  "
+    },
+    "output_path": "regular#en_025.wav"
+  }
+]
