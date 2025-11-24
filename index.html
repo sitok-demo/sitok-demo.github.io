@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="generator" content="Hugo 0.88.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <title>TaDiCodec</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1091.0" data-gr-ext-installed="">
+
+<div class="container">
+<header role="banner">
+</header>
+<main role="main">
+<article itemscope itemtype="https://schema.org/BlogPosting">
+
+<div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
+    <div class="text-center">
+      <h2>Scaling Speech Tokenizers with Diffusion Autoencoders</h2>
+    </div>
+    <p><b>Abstract</b>
+        Speech tokenizers are foundational to speech language models, yet existing approaches face two major challenges: (1) balancing trade-offs between encoding 
+        semantics for understanding and acoustics for reconstruction, and (2) achieving
+        low bit rates and low token rates. We propose <b>Speech Diffusion Tokenizer (SiTok)</b>,
+        a diffusion autoencoder that jointly learns semantic-rich representations through
+        supervised learning and enables high-fidelity audio reconstruction with diffusion.
+        We scale SiTok to 1.6B parameters and train it on 2 million hours of speech. Experiments show that SiTok outperforms strong baselines on both reconstruction
+        and understanding tasks, at an extremely low token rate of 12.5 Hz and a bit-rate
+        of 200 bits-per-second.
+    </p>
+
+    <p><b>This page is for research demonstration purposes only.</b></p>
+
+    
+</div>
+
+
+<div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
+    <h2 id="speech-reconstruction-comparison" style="text-align: center;">Speech Reconstruction Comparison with Other Systems</h2>
+    <p>This section compares the speech reconstruction quality of various systems with different bitrates. We choose some in-the-wild and expressive samples to better demonstrate the reconstruction quality of SiTok.</p>
+
+    <div class="table-responsive pt-3">
+        <table class="table table-hover pt-2">
+            <thead>
+                <tr>
+                    <th style="text-align: center; width: 220px;">Ground Truth</th>
+                    <th style="text-align: center; width: 220px;">Mimi (1.1 kbps)</th>
+                    <th style="text-align: center; width: 220px;">WavTokenizer (0.9 kbps)</th>
+                    <th style="text-align: center; width: 220px;">BiCodec (0.65 kbps)</th>
+                    <th style="text-align: center; width: 220px;">SiTok (Ours) (0.2 kbps)</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <!-- en_001 -->
+                <tr>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/gt/en_001.wav"></audio></td>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/mimi/en_001.wav"></audio></td>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/wavtokenizer/en_001.wav"></audio></td>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/bicodec/en_001.wav"></audio></td>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/ours/en_001.wav"></audio></td>
+                </tr>
+
+                <!-- en_002 -->
+                <tr>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/gt/en_002.wav"></audio></td>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/mimi/en_002.wav"></audio></td>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/wavtokenizer/en_002.wav"></audio></td>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/bicodec/en_002.wav"></audio></td>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/ours/en_002.wav"></audio></td>
+                </tr>
+
+                <!-- en_003 -->
+                <tr>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/gt/en_003.wav"></audio></td>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/mimi/en_003.wav"></audio></td>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/wavtokenizer/en_003.wav"></audio></td>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/bicodec/en_003.wav"></audio></td>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/ours/en_003.wav"></audio></td>
+                </tr>
+
+                <!-- en_010 -->
+                <tr>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/gt/en_010.wav"></audio></td>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/mimi/en_010.wav"></audio></td>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/wavtokenizer/en_010.wav"></audio></td>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/bicodec/en_010.wav"></audio></td>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/ours/en_010.wav"></audio></td>
+                </tr>
+
+                <!-- en_018 -->
+                <tr>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/gt/en_018.wav"></audio></td>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/mimi/en_018.wav"></audio></td>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/wavtokenizer/en_018.wav"></audio></td>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/bicodec/en_018.wav"></audio></td>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/ours/en_018.wav"></audio></td>
+                </tr>
+
+                <!-- en_023 -->
+                <tr>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/gt/en_023.wav"></audio></td>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/mimi/en_023.wav"></audio></td>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/wavtokenizer/en_023.wav"></audio></td>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/bicodec/en_023.wav"></audio></td>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/ours/en_023.wav"></audio></td>
+                </tr>
+
+                <!-- en_025 -->
+                <tr>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/gt/en_025.wav"></audio></td>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/mimi/en_025.wav"></audio></td>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/wavtokenizer/en_025.wav"></audio></td>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/bicodec/en_025.wav"></audio></td>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/ours/en_025.wav"></audio></td>
+                </tr>
+
+
+                <!-- zh_005 -->
+                <tr>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/gt/zh_005.wav"></audio></td>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/mimi/zh_005.wav"></audio></td>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/wavtokenizer/zh_005.wav"></audio></td>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/bicodec/zh_005.wav"></audio></td>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/ours/zh_005.wav"></audio></td>
+                </tr>
+
+                <!-- zh_006 -->
+                <tr>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/gt/zh_006.wav"></audio></td>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/mimi/zh_006.wav"></audio></td>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/wavtokenizer/zh_006.wav"></audio></td>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/bicodec/zh_006.wav"></audio></td>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/ours/zh_006.wav"></audio></td>
+                </tr>
+
+                <!-- zh_009 -->
+                <tr>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/gt/zh_009.wav"></audio></td>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/mimi/zh_009.wav"></audio></td>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/wavtokenizer/zh_009.wav"></audio></td>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/bicodec/zh_009.wav"></audio></td>
+                    <td style="text-align:center;"><audio controls style="width:220px;"><source src="demo_sample/ours/zh_009.wav"></audio></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+<div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
+    <h2 id="zero-shot-tts" style="text-align: center;">Zero-Shot TTS</h2>
+    <p>
+      This section demonstrates the zero-shot TTS capabilities built on <b>SiTok</b>.
+      We present diverse test cases with in-the-wild and expressive prompts and long-form target texts,
+      highlighting SiTok's ability to be effectively and efficiently used for zero-shot TTS.
+    </p>
+  
+    <div class="table-responsive pt-3">
+      <table class="table table-hover pt-2">
+        <thead>
+          <tr>
+            <th style="text-align: center; width: 380px;">Target Text</th>
+            <th style="text-align: center; width: 220px;">Prompt Speech</th>
+            <th style="text-align: center; width: 220px;">Generated Speech</th>
+          </tr>
+        </thead>
+  
+        <tbody>
+          <!-- en_002 -->
+          <tr>
+            <td style="vertical-align: middle; text-align: center; border-bottom: 1px solid #ddd;">
+              <ul style="list-style-type: none; padding: 0;">
+                <li>
+                  After that point, new developments and insights in various fields, such as technology, science, and culture, continue to emerge. It is essential to stay updated with the latest information to keep our understanding current and relevant. Engaging with recent publications, discussions, and updates will enhance our knowledge and perspective on evolving topics.
+                </li>
+              </ul>
+            </td>
+            <td style="vertical-align: middle; text-align: center; border-bottom: 1px solid #ddd;">
+              <audio controls style="width: 220px;">
+                <source src="demo_sample/tts/prompt/en_002.wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </td>
+            <td style="vertical-align: middle; text-align: center; border-bottom: 1px solid #ddd;">
+              <audio controls style="width: 220px;">
+                <source src="demo_sample/tts/sitok_tts/en_002.wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </td>
+          </tr>
+  
+          <!-- en_013 -->
+          <tr>
+            <td style="vertical-align: middle; text-align: center; border-bottom: 1px solid #ddd;">
+              <ul style="list-style-type: none; padding: 0;">
+                <li>
+                  You think you can just waltz in here and cause chaos? Well, I've got news for you. This time, there's no escaping the consequences. So, one by one, step forward, and let's see who's bold enough to face the music. It's time for a little dose of reality—prepare to be dealt with!
+                </li>
+              </ul>
+            </td>
+            <td style="vertical-align: middle; text-align: center; border-bottom: 1px solid #ddd;">
+              <audio controls style="width: 220px;">
+                <source src="demo_sample/tts/prompt/en_013.wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </td>
+            <td style="vertical-align: middle; text-align: center; border-bottom: 1px solid #ddd;">
+              <audio controls style="width: 220px;">
+                <source src="demo_sample/tts/sitok_tts/en_013.wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </td>
+          </tr>
+  
+          <!-- en_014 -->
+          <tr>
+            <td style="vertical-align: middle; text-align: center; border-bottom: 1px solid #ddd;">
+              <ul style="list-style-type: none; padding: 0;">
+                <li>
+                  Let it envelop you like a cozy blanket, reminding you of the moments shared and the lessons learned. Embrace the wisdom that flows from those experiences, letting it guide you through challenges and inspire your dreams. Each memory is a treasure, a flicker of light that can illuminate the darkest paths. Let the love of your elder resonate within.
+                </li>
+              </ul>
+            </td>
+            <td style="vertical-align: middle; text-align: center; border-bottom: 1px solid #ddd;">
+              <audio controls style="width: 220px;">
+                <source src="demo_sample/tts/prompt/en_014.wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </td>
+            <td style="vertical-align: middle; text-align: center; border-bottom: 1px solid #ddd;">
+              <audio controls style="width: 220px;">
+                <source src="demo_sample/tts/sitok_tts/en_014.wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </td>
+          </tr>
+  
+          <!-- en_015 -->
+          <tr>
+            <td style="vertical-align: middle; text-align: center; border-bottom: 1px solid #ddd;">
+              <ul style="list-style-type: none; padding: 0;">
+                <li>
+                  He greeted everyone with genuine warmth, making each person feel special and valued. As he engaged in conversation, his laughter was infectious, creating an atmosphere of joy that drew people in. Whether it was a simple hello or an encouraging word, his presence had the power to uplift even the heaviest of hearts, leaving a lasting impression on all who crossed his path.
+                </li>
+              </ul>
+            </td>
+            <td style="vertical-align: middle; text-align: center; border-bottom: 1px solid #ddd;">
+              <audio controls style="width: 220px;">
+                <source src="demo_sample/tts/prompt/en_015.wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </td>
+            <td style="vertical-align: middle; text-align: center; border-bottom: 1px solid #ddd;">
+              <audio controls style="width: 220px;">
+                <source src="demo_sample/tts/sitok_tts/en_015.wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </td>
+          </tr>
+  
+          <!-- en_018 -->
+          <tr>
+            <td style="vertical-align: middle; text-align: center; border-bottom: 1px solid #ddd;">
+              <ul style="list-style-type: none; padding: 0;">
+                <li>
+                  However, I believe that justice has a way of revealing itself in unexpected manners, and while the odds may be stacked against me, I am not one to back down easily. The law can often be a labyrinth, and within its twists and turns, there may still be a glimmer of hope. I have gathered a team of legal minds who are willing to explore every avenue, challenge every assumption, and shed light on the truths that others may wish to keep hidden. With tenacity and resilience, we will forge ahead, for sometimes the most remarkable victories come from the most unlikely circumstances.
+                </li>
+              </ul>
+            </td>
+            <td style="vertical-align: middle; text-align: center; border-bottom: 1px solid #ddd;">
+              <audio controls style="width: 220px;">
+                <source src="demo_sample/tts/prompt/en_018.wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </td>
+            <td style="vertical-align: middle; text-align: center; border-bottom: 1px solid #ddd;">
+              <audio controls style="width: 220px;">
+                <source src="demo_sample/tts/sitok_tts/en_018.wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </td>
+          </tr>
+  
+          <!-- en_019 -->
+          <tr>
+            <td style="vertical-align: middle; text-align: center; border-bottom: 1px solid #ddd;">
+              <ul style="list-style-type: none; padding: 0;">
+                <li>
+                  It might give you the space to collect your thoughts and emotions, to reflect on everything we've been through. After all, sometimes a little distance can provide clarity, and I want you to feel comfortable.
+                </li>
+              </ul>
+            </td>
+            <td style="vertical-align: middle; text-align: center; border-bottom: 1px solid #ddd;">
+              <audio controls style="width: 220px;">
+                <source src="demo_sample/tts/prompt/en_019.wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </td>
+            <td style="vertical-align: middle; text-align: center; border-bottom: 1px solid #ddd;">
+              <audio controls style="width: 220px;">
+                <source src="demo_sample/tts/sitok_tts/en_019.wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </td>
+          </tr>
+  
+          <!-- en_022 -->
+          <tr>
+            <td style="vertical-align: middle; text-align: center; border-bottom: 1px solid #ddd;">
+              <ul style="list-style-type: none; padding: 0;">
+                <li>
+                  You'll see a large oak tree nearby, and just beyond that, there's a small playground with swings and slides. It's a great spot for relaxing or letting the kids have some fun. Just follow the path, and you'll find plenty of space to enjoy the fresh air.
+                </li>
+              </ul>
+            </td>
+            <td style="vertical-align: middle; text-align: center; border-bottom: 1px solid #ddd;">
+              <audio controls style="width: 220px;">
+                <source src="demo_sample/tts/prompt/en_022.wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </td>
+            <td style="vertical-align: middle; text-align: center; border-bottom: 1px solid #ddd;">
+              <audio controls style="width: 220px;">
+                <source src="demo_sample/tts/sitok_tts/en_022.wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </td>
+          </tr>
+  
+          <!-- en_025 -->
+          <tr>
+            <td style="vertical-align: middle; text-align: center;">
+              <ul style="list-style-type: none; padding: 0;">
+                <li>
+                  I can't shake this feeling of guilt, this notion that happiness is something I have to earn, not something I can simply take. Every laugh feels forced, every smile feels like a mask, hiding the turmoil within. I keep reminding myself of the struggles around me, the battles that so many face daily. How could I possibly revel in joy when there's so much sorrow in the world? It's a constant tug-of-war between wanting to feel free and the weight of responsibility pressing down on my heart.
+                </li>
+              </ul>
+            </td>
+            <td style="vertical-align: middle; text-align: center;">
+              <audio controls style="width: 220px;">
+                <source src="demo_sample/tts/prompt/en_025.wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </td>
+            <td style="vertical-align: middle; text-align: center;">
+              <audio controls style="width: 220px;">
+                <source src="demo_sample/tts/sitok_tts/en_025.wav" />
+                Your browser does not support the audio element.
+              </audio>
+            </td>
+          </tr>
+  
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+</article>
+</main>
+</div>
+
+</body>
+</html>
